@@ -11,9 +11,10 @@ function App() {
   })
   
   const getData = () => {
-    axios.get('/api/get_topics').then(response => {
+    axios.get('get_topics').then(response => {
       getTopics(response.data); 
     });
+    console.log(data);
   }
 
   return (
@@ -26,9 +27,7 @@ function App() {
         <button>Submit</button>
         <h1>Answer:</h1>
         <ul>
-          {data.topics.map(topic => {
-            return <li>{topic}</li>
-          })}
+          <li>test</li>
         </ul>
       </header>
     </div>
